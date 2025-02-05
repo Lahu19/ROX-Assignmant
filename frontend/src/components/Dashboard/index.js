@@ -130,10 +130,10 @@ class Dashboard extends Component {
           <tr>
             <th>id</th>
             <th>title</th>
-            <th>price</th>
             <th>description</th>
+            <th>price</th>
             <th>category</th>
-            <th>image</th>
+            <th>image</th>            
             <th>sold</th>
           </tr>
         </thead>
@@ -145,8 +145,9 @@ class Dashboard extends Component {
                   <td className="center">{each.id}</td>
                   <td>{each.title}</td>
                   {/* I used the round function for avoiding the floting values */}
-                  <td className="center">{Math.round(each.price)} Rs</td>
+                  
                   <td>{each.description}</td>
+                  <td className="center">{Math.round(each.price)} Rs</td>
                   <td className="center" style={{textTransform:"capitalize"}}>{each.category}</td>
                   <td className="center">
                     {/* {each.image} */}
@@ -157,6 +158,7 @@ class Dashboard extends Component {
                       alt={each.title}
                     />
                   </td>
+                  
                   <td className="sold_status">
                     {each.sold ? "✅" : undefined}
                   </td>
